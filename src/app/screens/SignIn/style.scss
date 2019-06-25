@@ -1,0 +1,34 @@
+@import "../../themes/default/utils.scss";
+@import "../../themes/default/var.scss";
+
+.sign-in {
+  .paper {
+    margin-top: 40px;
+  }
+
+  .paper {
+    .form {
+      .last-input-second {
+        min-height: 72px;
+        margin-bottom: 7px;
+      }
+      .not-account {
+        margin-top: 3px;
+        margin-bottom: 40px;
+
+        p {
+          color: $darkTexColor;
+          font-size: toRem(14px);
+          font-weight: 500;
+
+          a {
+            cursor: pointer;
+            font-size: toRem(14px);
+            text-decoration: none;
+            color: $orangeColor;
+          }
+        }
+      }
+    }
+  }
+}

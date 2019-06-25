@@ -1,0 +1,68 @@
+@import "../../themes/default/utils.scss";
+@import "../../themes/default/var.scss";
+
+.calc-wrapper {
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 30px;
+  }
+  input,
+  select {
+    width: 200px;
+    height: 40px;
+    border: 1px solid $lightBlueColor !important;
+    border-radius: 5px !important;
+    font-size: 20px !important;
+    text-align-last: center;
+  }
+  .content {
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px;
+  }
+  button {
+    height: 50px;
+    background: $greenColor;
+    span {
+      font-size: 20px;
+      color: white;
+    }
+    &:hover {
+      cursor: pointer;
+      background: $greenColor;
+    }
+  }
+  .count-money {
+    .result {
+      border-radius: 5px;
+      border: 1px solid $lightBlueColor;
+      padding: 5px;
+    }
+  }
+}
+@include media-down(sm) {
+  .calc-wrapper {
+    .content {
+      margin: 20px 0;
+      width: 320px;
+      p {
+        font-size: 20px;
+      }
+      input,
+      select {
+        width: 150px;
+      }
+    }
+    .content {
+      button {
+        height: 40px;
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

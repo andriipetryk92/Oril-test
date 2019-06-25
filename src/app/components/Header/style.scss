@@ -1,0 +1,64 @@
+@import "../../themes/default/var";
+@import "../../themes/default/utils.scss";
+
+header {
+  background-color: $lightBlueColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .pages {
+    display: flex;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      margin: 0 50px;
+      p {
+        font-size: 30px !important;
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .user {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    p {
+      font-size: 20px;
+      color: white;
+    }
+    button {
+      color: white;
+      background: $greenColor;
+      &:hover {
+        background: $greenColor;
+      }
+    }
+    .logout {
+      margin-left: 50px;
+    }
+  }
+}
+@include media-down(sm) {
+  header {
+    justify-content: space-evenly;
+    .pages {
+      a {
+        margin: 10px;
+        p {
+          font-size: 20px !important;
+        }
+      }
+    }
+    .user {
+      .logout {
+        margin-left: 10px;
+      }
+    }
+  }
+}

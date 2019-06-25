@@ -1,0 +1,53 @@
+@import "../../themes/default/var.scss";
+@import "../../themes/default/utils.scss";
+
+.sign-up {
+  .auth-content {
+    .title {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-family: $baseFontFamily;
+        font-size: toRem(22px);
+        color: $blueGreyColor;
+      }
+
+      p {
+        font-weight: 500;
+        display: flex;
+        margin: 7px auto;
+        font-size: toRem(15px);
+        color: $blueGreyColor;
+
+        span {
+          cursor: pointer;
+          color: $greenColor;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .form {
+    > label {
+      font-weight: 500;
+
+      > input::placeholder {
+        color: $lighterGreyColor;
+      }
+    }
+
+    .last-input {
+      min-height: 78px !important;
+    }
+
+    .btn-auth {
+      margin-top: 26px;
+      background-color: $greenColor;
+      &:hover {
+        background-color: $greenColor;
+      }
+    }
+  }
+}

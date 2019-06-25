@@ -1,0 +1,89 @@
+@import "../../themes/default/utils.scss";
+@import "../../themes/default/var.scss";
+
+.currencies-wrapper {
+  display: flex;
+  flex-direction: column;
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .get-data {
+      height: 50px;
+      background: $greenColor;
+      span {
+        font-size: 20px;
+        color: white;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .content-date {
+    display: flex;
+    margin: 50px;
+    width: 500px;
+    justify-content: space-between;
+    p {
+      font-size: 25px;
+    }
+    input {
+      width: 200px;
+      height: 40px;
+      border: 1px solid $lightBlueColor;
+      border-radius: 5px;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 90%;
+    thead {
+      background-color: $lightBlueColor;
+      color: white;
+      font-size: 20px;
+    }
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    tr th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+    tr th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+  }
+}
+
+@include media-down(sm) {
+  .currencies-wrapper {
+    .content-date {
+      margin: 20px 10px;
+      width: 100%;
+      p {
+        font-size: 20px;
+      }
+      input {
+        width: 150px;
+      }
+    }
+    .content {
+      button {
+        height: 40px;
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+    table {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}

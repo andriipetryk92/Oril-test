@@ -1,0 +1,19 @@
+@import './var.scss';
+
+$breakpoints: (
+  sm: 769px,
+);
+
+@mixin media-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media screen and (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
